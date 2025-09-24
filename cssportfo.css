@@ -191,14 +191,13 @@ body {
 .slider {
   width: 100%;
   display: flex;
-  overflow: hidden;
+  overflow-x: auto;
   border: 3px solid #ccc;
   border-radius: 0.5rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem #ffffff7a;
   position: relative;
-  transition: box-shadow 0.3s ease;
 }
 
 .slider:hover {
@@ -208,33 +207,14 @@ body {
 }
 
 .slider img {
+  flex: 0 0 100%;
   width: 100%;
   height: auto;
   object-fit: cover;
+  scroll-snap-align: start;
 }
 
-/* Slider nav dots */
-
-.slider-nav {
-  display: flex;
-  justify-content: center;
-  gap: clamp(0.3rem, 1vw, 0.75rem); 
-  margin-top: 0.75rem; 
-  flex-wrap: wrap; 
-}
-
-.slider-nav a {
-  width: clamp(0.5rem, 1vw, 0.75rem);
-  height: clamp(0.5rem, 1vw, 0.75rem);
-  border-radius: 50%;
-  background-color: #ffffff;
-  opacity: 0.75;
-  transition: opacity ease 0.25s;
-}
-
-.slider-nav a:hover {
-  opacity: 1;
-}
+/* Project description */
 
 .description {
   margin-top: 2rem;
